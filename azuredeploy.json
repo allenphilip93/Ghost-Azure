@@ -14,6 +14,7 @@
     "sku": {
       "type": "string",
       "allowedValues": [
+        "Free",
         "Basic",
         "Standard",
         "Premium"
@@ -107,9 +108,9 @@
             "[resourceId('Microsoft.Web/sites', parameters('siteName'))]"
           ],
           "properties": {
-            "use32BitWorkerProcess": false,
+            "use32BitWorkerProcess": true,
             "httpsOnly": true,
-            "alwaysOn": true
+            "alwaysOn": false
           }
         },
         {
